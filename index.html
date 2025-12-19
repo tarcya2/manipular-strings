@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de strings</title>
+</head>
+<body>
+    <h1>Manipulação de Strings</h1>
+    <p id="concatenar1"></p>
+    <p id="concatenar2"></p>
+    <p id="concatenar3"></p>
+    <p id="tamanho"></p>
+    <p id="maiusculas"></p>
+    <p id="minusculas"></p>
+    <p id="letra"></p>
+    <script>
+        //concatenar = juntar duas coisas (strings)
+        //concatenação com "+"
+    let fullName = "Gabriel " + "Tarcia";
+    console.log (fullName);
+    document.getElementById("concatenar1").innerText = fullName;
+    //concatenação com template literais > usando "`"
+let welcome = `Olá, ${fullName}!`;
+document.getElementById ("concatenar2").innerText = welcome;
+
+//concat() > mescla duas coisas (variáveis, por exemplo)
+let nome = "Gabriel"
+let sobrenome = "Tarcia"
+let nomeCompleto = nome.concat(sobrenome);
+document.getElementById("concatenar3").innerText = nomeCompleto;
+
+//métodos comuns para manipulação de strings
+//length > retorna o comprimento da string
+let text = "JavaScript";
+let tamanhoText = text.length;
+document.getElementById ("tamanho").innerText = `JavaScript tem ${tamanhoText} letras.`;
+
+//toUpperCase() > converte a string para maiúsculas
+let maiuscula = text.toUpperCase();
+document.getElementById("maiusculas").innerText = maiuscula;
+
+//toLowerCase() > converte a string para minúsculas
+let minuscula = text.toLowerCase();
+document.getElementById("minusculas").innerText = minuscula;
+
+//charAt(index) > retorna o caractere no índice especificado
+let caractere = text.charAt(0);
+document.getElementById ("letra").innerText = `A primeira letra da palavra JavaScript é ${caractere}.`;
+    </script>
+
+</body>
+</html>
